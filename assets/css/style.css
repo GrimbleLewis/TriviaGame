@@ -1,0 +1,21 @@
+body { 
+    background: url(../images/space.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container{
+    background-color: blueviolet;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    opacity: 0.90;
+}
+
+#trivia-box {
+    margin-top: 15px;
+    height: 800px;
+    
+}
