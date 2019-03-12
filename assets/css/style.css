@@ -8,6 +8,7 @@ body {
 
 .container{
     background-color: blueviolet;
+    color: white;
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
@@ -15,7 +16,16 @@ body {
 }
 
 #trivia-box {
-    margin-top: 15px;
-    height: 800px;
+    margin-top: 25px;
+
     
+}
+
+#question-box {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+#start-button {
+    padding: 20px 40px 20px 40px;
 }

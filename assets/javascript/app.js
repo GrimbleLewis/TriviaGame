@@ -1,3 +1,12 @@
+//create a start button that begins the game and starts the timer for questions
+//create a function that displays the questions and possible answers on the screen and replaces previous question
+//have able to track which answer the user clicks on
+//create a total score to keep track of correct answers
+//create a function that displays either the right or wrong answer image after user chooses an answer
+//create a total score diplay at the end of the quiz with a restart button function
+
+
+
 var intervalId;
 var correctAnswerImage = '<img src="../images/correct-answer.gif">'
 var wrongAnswerImage =  '<img src="../images/wrong-answer.gif">'
@@ -26,3 +35,37 @@ var answers = [
 ];
 
 var correctAnswers = [1,0,2,3,2,0,3,2];
+
+
+$("#start-button").click(displayQuestions);
+
+
+
+
+function displayQuestions(){
+
+    $("#start-button").hide();
+    for (q=0; q<=questions.length; q++){
+    $("#question-display").text(questions[q])
+    };
+    var printArray = function(answers) {
+        if ( typeof(answers) == "object") {
+            for (var a = 0; a < answers.length; a++) {
+         $("#answers-diplay").text(printArray(answers[a]));
+            }
+        }
+    }
+    
+    console.log(answers)
+};
+
+
+    
+
+
+    // for (a=0; a<=answers.length; a++){
+    // $("#answers-diplay").text(answers[a])
+    // };
+    // console.log(answers)
+
+
