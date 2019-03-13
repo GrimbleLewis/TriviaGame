@@ -12,51 +12,69 @@ var correctAnswerImage = '<img src="../images/correct-answer.gif">'
 var wrongAnswerImage =  '<img src="../images/wrong-answer.gif">'
 
 
-var questions = [
-    "What is the name of Leela's pet?",
-    "What was Fry's job in 1999?",
-    "What company does Dr.Farnsworth run?",
-    "What was Fry's bank account balance in 1999?",
-    "What did the Professors smelloscope detect in space?",
-    "What is Fry's favourite soft drink?",
-    "What is the name of Philip J. Frys older brother?",
-    "What was top of the list of Benders 10 most commonly used words?"
-];
+var questionObj = [{
+    question: "What is the name of Leela's pet?",
+    answers: ["Nobbler", "Nibbler", "Nubben", "Norman"],
+    rightAnswer: 1
+},
+{
+    question: "What was Fry's job in 1999?",
+    answers: ["Pizza Delivery Boy", "Newspaper Delivery Boy", "Milkman", "Shoe Shine Boy"],
+    rightAnswer: 0
+},
+{
+    question: "What company does Dr.Farnsworth run?",
+    answers: ["Space Express", "Earth Express", "Planet Express", "Federal Express"],
+    rightAnswer: 2
+},
+{
+    question: "What was Fry's bank account balance in 1999?",
+    answers: ["33 Cents", "53 Cents", "73 Cents", "93 Cents"],
+    rightAnswer: 3
+},
+{
+    question: "What did the Professors smelloscope detect in space?",
+    answers: ["A planet of cheese", "A comet", "A ball of garbage", "An alien ship"],
+    rightAnswer: 2
+},
+{
+    question: "What is Fry's favourite soft drink?",
+    answers: ["Slurm", "Slop", "Glurm", "Gloop"],
+    rightAnswer: 0
+},
+{
+    question: "What is the name of Philip J. Frys older brother?",
+    answers: ["Brannigan", "Darcy", "Florence", "Yancy"],
+    rightAnswer: 3
+},
+{
+    question: "What was top of the list of Benders 10 most commonly used words?",
+    answers: ["Daffodil", "Pimpmobile", "Ass", "Chumpette"],
+    rightAnswer: 2
+}];
 
-var answers = [
-    ["Nobbler", "Nibbler", "Nubben", "Norman"],
-    ["Pizza Delivery Boy", "Newspaper Delivery Boy", "Milkman", "Shoe Shine Boy"],
-    ["Space Express", "Earth Express", "Planet Express", "Federal Express"],
-    ["33 Cents", "53 Cents", "73 Cents", "93 Cents"],
-    ["A planet of cheese", "A comet", "A ball of garbage", "An alien ship"],
-    ["Slurm", "Slop", "Glurm", "Gloop"],
-    ["Brannigan", "Darcy", "Florence", "Yancy"],
-    ["Daffodil", "Pimpmobile", "Ass", "Chumpette"]
-];
-
-var correctAnswers = [1,0,2,3,2,0,3,2];
-
-
+$(".answers-show").hide();
 $("#start-button").click(displayQuestions);
 
 
+function show(e){
+    e.style.display = '';
+}
 
+function hide(e){
+    e.style.display = 'none';
+}
 
 function displayQuestions(){
 
     $("#start-button").hide();
-    for (q=0; q<=questions.length; q++){
-    $("#question-display").text(questions[q])
-    };
-    var printArray = function(answers) {
-        if ( typeof(answers) == "object") {
-            for (var a = 0; a < answers.length; a++) {
-         $("#answers-diplay").text(printArray(answers[a]));
-            }
-        }
-    }
+    $(".answers-show").show();
+    $("#question-display").html(questionObj[0].question)
     
-    console.log(answers)
+    
+
+    
+    console.log(answers[0])
 };
 
 
