@@ -1,55 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <title>Trivia Game</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12" id="trivia-box">
-          <img src="assets/images/logo.svg.png" alt="Futurama logo" />
-          <h1 style="font-weight:bold">TRIVIA GAME</h1>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>Trivia Game</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12" id="trivia-box">
+        <img src="assets/images/logo.svg.png" alt="Futurama logo" />
+        <h1 style="font-weight:bold">TRIVIA GAME</h1>
       </div>
-      <div class="row">
-        <div class="col-sm-12" id="question-box">
-          <button
-            type="button"
-            class="btn btn-success btn-lg"
-            id="start-button"
-          >
-            Start
+    </div>
+    <div class="row">
+      <div class="col-sm-12" id="question-box">
+        <button type="button" class="btn btn-success btn-lg" id="start-button">
+          Start
+        </button>
+        <button type="button" class="btn btn-success btn-lg" id="restart-button">
+            Restart
           </button>
-          <h2 id="question-display"></h2>
-        </div>
+        <h2 id="question-display"></h2>
       </div>
-      <div class="row answers-show">
-        <div class="col-sm-6 card">
+    </div>
+    <div class="row answers-show">
+      <div class="col-sm-6 card">
+        <button type="button" class="btn btn-light answer-button" id="0">
           <div class="card-body" id="answer-a"></div>
-        </div>
-        <div class="col-sm-6 card"></div>
-        <div class="card-body" id="answer-b"></div>
+        </button>
       </div>
+      <div class="col-sm-6 card">
+        <button type="button" class="btn btn-light answer-button" id="1">
+          <div class="card-body" id="answer-b"></div>
+        </button>
+      </div>
+    </div></br>
       <div class="row answers-show">
         <div class="col-sm-6 card">
-          <div class="card-body" id="answer-c"></div>
+          <button type="button" class="btn btn-light answer-button" id="2">
+            <div class="card-body" id="answer-c"></div>
+          </button>
         </div>
         <div class="col-sm-6 card">
-          <div class="card-body" id="answer-d"></div>
+          <button type="button" class="btn btn-light answer-button" id="3">
+            <div class="card-body" id="answer-d"></div>
+          </button>
         </div>
       </div>
     </div>
 
+
     <script type="text/javascript" src="assets/javascript/app.js"></script>
-  </body>
+</body>
+
 </html>

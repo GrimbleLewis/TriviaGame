@@ -8,8 +8,10 @@
 
 
 var intervalId;
+var count = 0;
 var correctAnswerImage = '<img src="../images/correct-answer.gif">'
 var wrongAnswerImage =  '<img src="../images/wrong-answer.gif">'
+var score = 0;
 
 
 var questionObj = [{
@@ -54,6 +56,7 @@ var questionObj = [{
 }];
 
 $(".answers-show").hide();
+$("#restart-button").hide();
 $("#start-button").click(displayQuestions);
 
 
@@ -69,21 +72,67 @@ function displayQuestions(){
 
     $("#start-button").hide();
     $(".answers-show").show();
-    $("#question-display").html(questionObj[0].question)
-    
-    
+    $("#question-display").show();
+    $("#question-display").html(questionObj[count].question);
+    $("#answer-a").html(questionObj[count].answers[0]);
+    $("#answer-b").html(questionObj[count].answers[1]);
+    $("#answer-c").html(questionObj[count].answers[2]);
+    $("#answer-d").html(questionObj[count].answers[3]);
+   
 
-    
-    console.log(answers[0])
 };
+    
+    function checkAnswer(){
+
+        nextQuestion();
+        // var currentAnswer = $(".card-body")
+        // console.log(currentAnswer)
+        // if (currentAnswer == questionObj[count].rightAnswer){
+        //     alert("yay")
+        // }
 
 
+        // for (i=0; i<questionObj[count].answers.length; i++){
+           
+        //     if (i === questionObj[count].rightAnswer + 1){
+        //         break;}
+
+        //         console.log(i)
+        //         alert("yay");
+        //     }
     
 
 
-    // for (a=0; a<=answers.length; a++){
-    // $("#answers-diplay").text(answers[a])
-    // };
-    // console.log(answers)
+    }
+
+$(".answer-button").click(checkAnswer)
+    
+    
 
 
+function nextQuestion(){
+    count++;
+    if (count === questionObj.length){
+        finalscore();
+    } else {
+    displayQuestions();
+    }
+}
+
+function finalscore(){
+
+    $("#start-button").hide();
+    $(".answers-show").hide();
+    $("#question-display").hide();
+    $("#restart-button").show();
+
+}
+
+function resetGame (){
+    score = 0;
+    count = 0;
+    $("#restart-button").hide();
+    displayQuestions();
+}
+
+$("#restart-button").click(resetGame);

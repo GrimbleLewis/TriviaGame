@@ -29,3 +29,8 @@ body {
 #start-button {
     padding: 20px 40px 20px 40px;
 }
+
+.card {
+   margin: 0;
+   padding: 0;
+}
