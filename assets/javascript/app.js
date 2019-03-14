@@ -12,6 +12,7 @@ var count = 0;
 var correctAnswerImage = '<img src="../images/correct-answer.gif">'
 var wrongAnswerImage =  '<img src="../images/wrong-answer.gif">'
 var score = 0;
+var totalscore = 0;
 
 
 var questionObj = [{
@@ -81,17 +82,36 @@ function displayQuestions(){
    
 
 };
-    
-    function checkAnswer(){
+var selectedAnswer;
 
-        nextQuestion();
+    function checkAnswer(event){
+        console.log(event)
+        
+
+        if (event.target.id === "answer-a"){
+            selectedAnswer = 0;
+        } else if (event.target.id === "answer-b"){
+            selectedAnswer = 1;
+        } else if (event.target.id === "answer-c"){
+            selectedAnswer = 2;
+        } else if (event.target.id === "answer-d"){
+            selectedAnswer = 3;
+        }
+
+        if (selectedAnswer === questionObj[count].rightAnswer){
+            console.log("correct");
+            score++;
+            nextQuestion();
+            
+        } else {
+            console.log("wrong!")
+            nextQuestion();
+        }
         // var currentAnswer = $(".card-body")
         // console.log(currentAnswer)
         // if (currentAnswer == questionObj[count].rightAnswer){
         //     alert("yay")
         // }
-
-
         // for (i=0; i<questionObj[count].answers.length; i++){
            
         //     if (i === questionObj[count].rightAnswer + 1){
