@@ -6,6 +6,9 @@ body {
     background-size: cover;
 }
 
+.container1{
+    text-align: center;
+}
 .container{
     background-color: blueviolet;
     color: white;
@@ -19,6 +22,11 @@ body {
     margin-top: 25px;
 
     
+}
+
+
+#timer-display {
+    color: crimson;
 }
 
 #question-box {
