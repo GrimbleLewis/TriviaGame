@@ -71,14 +71,6 @@ $("#restart-button").hide();
 $("#timer-display").hide();
 $("#start-button").click(displayQuestions);
 
-//functions to show or hide content depending on what I want visible at the time
-function show(e){
-    e.style.display = '';
-}
-
-function hide(e){
-    e.style.display = 'none';
-}
 
 //pulls information from the object and displays the question,timer, and answers
 function displayQuestions(){
