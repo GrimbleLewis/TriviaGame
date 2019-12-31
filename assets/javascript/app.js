@@ -203,10 +203,16 @@ $("#restart-button").click(resetGame);
 
 
 var audioElement = document.createElement("audio");
-        audioElement.setAttribute("src", "assets/images/Connie-Francis_if_it_takes_forever.mp3");
+        audioElement.setAttribute("src", "assets/images/Connie-Francis_If_it_takes_forever.mp3");
+
+    
 
     $(".theme-button").on("click", function() {
+        audioElement.volume = 0.1;
+        var isPlaying = audioElement.currentTime > 0 && !audioElement.paused && !audioElement.ended && audioElement.readyState > 2;
+        if (!isPlaying) {
         audioElement.play();
+        }
     });
     $(".pause-button").on("click", function() {
         audioElement.pause();
