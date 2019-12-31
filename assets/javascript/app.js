@@ -203,8 +203,7 @@ $("#restart-button").click(resetGame);
 
 
 var audioElement = document.createElement("audio");
-        audioElement.setAttribute("src", "`assets/images/Connie-Francis_If_it_takes_forever.mp3`");
-
+        audioElement.setAttribute("src", "assets/images/Connie-Francis_If_it_takes_forever.mp3");
     
 
     $(".theme-button").on("click", function() {
